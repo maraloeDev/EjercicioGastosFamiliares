@@ -6,4 +6,11 @@
     </style>
 
     <style name="Theme.ControlGastos" parent="Base.Theme.ControlGastos" />
+    <style name="Theme.ControlGastos.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.ControlGastos.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.ControlGastos.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
