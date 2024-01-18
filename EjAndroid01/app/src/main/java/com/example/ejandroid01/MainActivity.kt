@@ -30,11 +30,9 @@ class MainActivity : AppCompatActivity() {
                     msj =
                         "Alguno de los datos que escribistes esta mal introducido.\nNo se encontro el usuario"
                 } else {
-                    var intent = Intent(this, MainActivityND::class.java)
-                    var bundle = Bundle()
-                    bundle.putString("user", name)
-
-                    intent.putExtra("bundle", bundle)
+                    val intent = Intent(this, MainActivityND::class.java).apply {
+                        putExtra("user", name)
+                    }
                     startActivity(intent)
                 }
             } else {

@@ -1,7 +1,9 @@
 package com.example.ejandroid01
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -25,15 +27,27 @@ private lateinit var binding: ActivityMainNdBinding
      binding = ActivityMainNdBinding.inflate(layoutInflater)
      setContentView(binding.root)
 
-//        var bundle = intent.getBundleExtra("bundle")
-//        var nameUs = bundle?.getString("user")
-//        findViewById<TextView>(R.id.tv_username).text = nameUs.toString()
+        val nameUs = intent.getStringExtra("user")
+        findViewById<TextView>(R.id.tv_username).text = nameUs.toString()
 
         setSupportActionBar(binding.appBarMainActivityNd.toolbar)
 
-        binding.appBarMainActivityNd.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+        binding.appBarMainActivityNd.fabReturn.setOnClickListener { view ->
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Alerta")
+            builder.setMessage("¿Estás seguro de que deseas volver al inicio?")
+
+            builder.setPositiveButton("Sí") { _, _ ->
+                var intent2 = Intent(this, MainActivity::class.java)
+                startActivity(intent2)
+            }
+
+            builder.setNegativeButton("No") { dialog, _ ->
+                dialog.dismiss()
+            }
+
+            val dialog = builder.create()
+            dialog.show()
         }
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
