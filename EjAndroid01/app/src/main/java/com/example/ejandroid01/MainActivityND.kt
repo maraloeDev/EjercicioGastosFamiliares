@@ -27,8 +27,8 @@ private lateinit var binding: ActivityMainNdBinding
      binding = ActivityMainNdBinding.inflate(layoutInflater)
      setContentView(binding.root)
 
-        val nameUs = intent.getStringExtra("user")
-        findViewById<TextView>(R.id.tv_username).text = nameUs.toString()
+       // val nameUs = intent.getStringExtra("user")
+        //findViewById<TextView>(R.id.tv_username).text = nameUs.toString()
 
         setSupportActionBar(binding.appBarMainActivityNd.toolbar)
 
