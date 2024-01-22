@@ -33,10 +33,10 @@ class MyGastosRecyclerViewAdapter : RecyclerView.Adapter<MyGastosRecyclerViewAda
         val concepto: TextView = binding.tvConcepto
         val categoria: TextView = binding.tvCategoria
 
-        init {
-            itemView.setOnClickListener {
-                // Aquí puedes agregar lógica para manejar clics en elementos individuales si es necesario
-            }
-        }
+//        init {
+//            itemView.setOnClickListener {
+//
+//            }
+//        }
     }
 }
