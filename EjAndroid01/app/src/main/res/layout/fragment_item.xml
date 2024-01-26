@@ -1,29 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="375dp"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:id="@+id/tv_concepto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
+    <data>
+        <variable
+            name="gasto"
+            type="com.example.controlgastos.GastosProvider.Gastos" />
+    </data>
 
-    <TextView
-        android:id="@+id/tv_categoria"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="375dp"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/button"
-        android:backgroundTint="#A50000"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="X"
-        android:layout_marginStart="225dp"
-        android:layout_marginEnd="10dp"/>
-</LinearLayout>
+        <TextView
+            android:id="@+id/tv_concepto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@{gasto.concepto}"
+            android:textAppearance="?attr/textAppearanceListItem" />
+
+        <TextView
+            android:id="@+id/tv_categoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@{gasto.categoria}"
+            android:textAppearance="?attr/textAppearanceListItem" />
+
+        <Button
+            android:id="@+id/button"
+            android:backgroundTint="#A50000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:layout_marginStart="225dp"
+            android:layout_marginEnd="10dp" />
+    </LinearLayout>
+</layout>
