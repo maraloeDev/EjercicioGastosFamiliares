@@ -3,6 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    // Color principal
+    <!-- Color principal-->
     <color name="maincolor">#001E42</color>
 </resources>
