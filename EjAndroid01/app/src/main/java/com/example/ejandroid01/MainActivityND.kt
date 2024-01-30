@@ -27,8 +27,8 @@ private lateinit var binding: ActivityMainNdBinding
      binding = ActivityMainNdBinding.inflate(layoutInflater)
      setContentView(binding.root)
 
-       // val nameUs = intent.getStringExtra("user")
-        //findViewById<TextView>(R.id.tv_username).text = nameUs.toString()
+//        val nameUs = intent.getStringExtra("user")
+//        findViewById<TextView>(R.id.tv_username).text = nameUs.toString()
 
         setSupportActionBar(binding.appBarMainActivityNd.toolbar)
 
@@ -60,11 +60,11 @@ private lateinit var binding: ActivityMainNdBinding
         navView.setupWithNavController(navController)
     }
 
-    //override fun onCreateOptionsMenu(menu: Menu): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
-      //  menuInflater.inflate(R.menu.main_activity_n_d, menu)
-        //return true
-    //}
+        menuInflater.inflate(R.menu.main_activity_n_d, menu)
+        return true
+    }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main_activity_nd)

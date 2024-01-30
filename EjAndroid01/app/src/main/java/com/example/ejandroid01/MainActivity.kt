@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             var name = binding.etName.text.toString()
             var password = binding.etPassword.text.toString()
 
-            if (!name.isNullOrBlank() && !password.isNullOrEmpty()) {
+            if (!name.isNullOrEmpty() && !password.isNullOrEmpty()) {
                 if (!UsuariosProvider.usuarios.contains(UsuariosProvider.Users(name, password))) {
                     msj =
                         "Alguno de los datos que escribistes esta mal introducido.\nNo se encontro el usuario"
